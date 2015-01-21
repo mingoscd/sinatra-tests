@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Top movies</title>
+</head>
+<body>
+	<h1>Top Movies</h1>
+	<% if @list.size >= 1 %>
+		<ol>
+		<% @list.each do |movie|  %>
+			<li><%= movie %></li>
+		<% end %>
+		</ol>
+	<% end %>
+</body>
+</html>
