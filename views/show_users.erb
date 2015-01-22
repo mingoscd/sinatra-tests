@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SL11</title>
+</head>
+<body>
+	<form action="/signup" method="POST">
+		<input type="text" name="nick">
+		<input type="submit">
+	</form>
+	<h2>Number of users is <%= @users.count %></h2>
+	<ol>
+		<% @users.each do |user| %>
+		<li><%= user %></li>
+		<% end %>
+	</ol>
+</body>
+</html>

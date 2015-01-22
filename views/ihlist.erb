@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ironhack list</title>
+	<style>td{ width: 150px;}table{margin:40px;}tr{height:25px;}</style>
+</head>
+<body>
+	<form action="/add_student" method="POST">
+		<input type="text" name="name" placeholder="Name">
+		<input type="text" name="surnames" placeholder="Surnames">
+		<input type="text" name="website" placeholder="Website">
+		<input type="date" name="birthday">
+		<input type="number" name="number_of_dogs" placeholder="Nº dogs">
+		First programming experience: <input type="checkbox" name="first_programming_experience" checked>
+		<input type="submit">
+	</form>
+	<table border="0">
+		<tr><td>Name</td><td>Surname</td><td>Birthday</td><td>Experience</td><td>Website</td></tr>
+		<tr></tr>
+		<% @list.each do |student| %>
+			<tr><td><%= student.name %></td><td><%= student.surnames %></td><td><%= student.birthday %></td>
+				<td><%= student.first_programming_experience %></td><td><%= student.website %></td></tr>
+		<% end %>
+	</table>
+</body>
+</html>
